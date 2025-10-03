@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "sink",
+  "name": "tt-url-shortener",
   "main": "dist/server/index.mjs",
   "assets": {
     "binding": "ASSETS",
@@ -25,6 +25,12 @@
     {
       "binding": "KV",
       "id": "a2d42ed57a2d451b9d97ac7a30de8b89" // IMPORTANT: Change this to your KV namespace ID
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "qr.ttamayo.com",
+      "custom_domain": true
     }
   ]
 }
